@@ -60,8 +60,8 @@ footer{margin-top:36px;border-top:1px solid #ccc;padding-top:10px;color:#666;fon
 <tr><td>17 أغسطس 2026</td><td>✅ تم: استلام خطاب إخلاء الطرف من الأهلي — يُسلَّم لقسم الرواتب خلال صلاحيته (14 يوماً)</td><td>الأهلي — والمادة 10.3 تلزم بذلك</td></tr>
 <tr class="mark"><td>أغسطس 2026 (جارٍ)</td><td><b>سداد البطاقتين بالكامل (88,914.40) ← التأكد من الصفر التام بعد 3-4 أيام ← الإغلاق النهائي + خطابا إغلاق + تحديث سمة</b></td><td class="red">أنت — أهم خطوة، لا تتأخر فيها يوماً واحداً</td></tr>
 <tr><td>27 سبتمبر 2026</td><td>أول قسط 7,696</td><td>خصم تلقائي</td></tr>
-<tr><td>27 نوفمبر 2026</td><td>آخر قسط لأختك (5,477) — يتحرر المبلغ من ديسمبر</td><td>أنت</td></tr>
-<tr><td>ديسمبر 2026</td><td>بدء الضخ الكامل في محفظة السداد المبكر</td><td>أنت — أمر تحويل تلقائي يوم الراتب</td></tr>
+<tr><td>27 أكتوبر 2026</td><td>آخر قسط لأختك (5,477) — الدفعات الثلاث الأخيرة: 27 أغسطس، 27 سبتمبر، 27 أكتوبر — ويتحرر المبلغ من نوفمبر</td><td>أنت</td></tr>
+<tr><td>نوفمبر 2026</td><td>بدء الضخ الكامل (7,983) في محفظة السداد المبكر</td><td>أنت — أمر تحويل تلقائي يوم الراتب</td></tr>
 <tr class="done"><td>~فبراير 2029</td><td>المحفظة تكفي التسوية → سداد كلي مبكر والتحرر الكامل 🎉 (مع بدل الوكالة — التفاصيل بالحاسبة أدناه)</td><td>أنت</td></tr>
 </table></div>
 <div class="alert">⚠ تذكير البطاقات: العقد لا يذكرها — المبلغ ينزل لحسابك وأنت تسددها بنفسك. كل يوم تأخير = رسوم يومية مستمرة. وبعد السداد لا تكتفِ بالتصفير: <b>اطلب الإغلاق النهائي كتابةً</b> وإلا بقيت الحدود مفتوحة في سمة وأمام الإغراء.</div>
@@ -80,7 +80,7 @@ footer{margin-top:36px;border-top:1px solid #ccc;padding-top:10px;color:#666;fon
 <h2>٤. ميزانيتك الشهرية الجديدة — كم يدخل المحفظة؟</h2>
 <p>حساب أمامي بسيط من الراتب مباشرة (لا علاقة له بأي ماضٍ — البطاقات أُغلقت وانتهى عهدها):</p>
 <div class="wrap"><table>
-<tr><th></th><th>سبتمبر – نوفمبر 2026</th><th>من ديسمبر 2026</th></tr>
+<tr><th></th><th>سبتمبر – أكتوبر 2026</th><th>من نوفمبر 2026</th></tr>
 <tr><td>الراتب الصافي (شامل بدل الوكالة 2,000)</td><td>29,579</td><td>29,579</td></tr>
 <tr><td>− قسط البنك العربي</td><td>7,696</td><td>7,696</td></tr>
 <tr><td>− قسط أختي</td><td>5,477</td><td class="green">0 — انتهى ✓</td></tr>
@@ -88,7 +88,7 @@ footer{margin-top:36px;border-top:1px solid #ccc;padding-top:10px;color:#666;fon
 <tr class="done"><td><b>= يدخل المحفظة شهرياً (مع بدل الوكالة)</b></td><td><b>2,506</b></td><td><b>7,983</b></td></tr>
 <tr><td><b>= لو سقط بدل الوكالة (−2,000)</b></td><td>506</td><td>5,983</td></tr>
 </table></div>
-<p class="note">لماذا يقفز الإيداع في ديسمبر؟ لأن قسط أختك (5,477) ينتهي في نوفمبر فينتقل كاملاً للمحفظة. ولماذا ليس أكثر من 7,983؟ لأن مصاريفك الـ13,900 مضمونة أولاً كل شهر — الخطة لا تجوّعك.</p>
+<p class="note">لماذا يقفز الإيداع في نوفمبر؟ لأن آخر قسط لأختك (5,477) في 27 أكتوبر 2026 فينتقل كاملاً للمحفظة. ولماذا ليس أكثر من 7,983؟ لأن مصاريفك الـ13,900 مضمونة أولاً كل شهر — الخطة لا تجوّعك.</p>
 <h2>٥. الحاسبة التفاعلية — جرّب أي وفورات وشاهد أثرها فوراً</h2>
 <div class="calc">
 <div>
@@ -136,7 +136,7 @@ function calc(){
   let P=P0, pot=seed, profitPaid=0, tb='', freedom=null, need=0;
   for(let k=1;k<=60;k++){
     const prof=P*r; profitPaid+=prof; P=P+prof-INST;
-    const diff=3629, sister=(k>=4)?5477:0, w=wak?2000:0, deficit=3123;
+    const diff=3629, sister=(k>=3)?5477:0, w=wak?2000:0, deficit=3123;
     let dep=diff+sister+w-deficit; if(dep<0)dep=0;
     let lump=(k===l1m?l1:0)+(k===l2m?l2:0);
     pot+=dep+extra+lump;
@@ -144,8 +144,8 @@ function calc(){
     const free=pot>=need&&!freedom;
     if(free)freedom=k;
     const pct=Math.min(100,pot/need*100);
-    const rowCls=free?'done':(k===4?'mark':'');
-    tb+='<tr class="'+rowCls+'"><td>'+k+'</td><td>'+mn(k)+'</td><td class="inst">'+fmt(INST)+'</td><td>'+fmt(diff)+'</td><td>'+fmt(sister)+'</td><td>'+fmt(w)+'</td><td>'+fmt(extra+lump)+'</td><td>+'+fmt(dep+extra+lump)+'</td><td>'+fmt(pot)+'</td><td class="loan">'+fmt(Math.max(P,0))+'</td><td>'+fmt(need)+'</td><td><div class="pbar"><div style="width:'+pct.toFixed(1)+'%"></div><span>'+pct.toFixed(0)+'%</span></div></td><td>'+(free?'✓ التحرر':(k===4?'🔓 تحرر قسط أختي':''))+'</td></tr>';
+    const rowCls=free?'done':(k===3?'mark':'');
+    tb+='<tr class="'+rowCls+'"><td>'+k+'</td><td>'+mn(k)+'</td><td class="inst">'+fmt(INST)+'</td><td>'+fmt(diff)+'</td><td>'+fmt(sister)+'</td><td>'+fmt(w)+'</td><td>'+fmt(extra+lump)+'</td><td>+'+fmt(dep+extra+lump)+'</td><td>'+fmt(pot)+'</td><td class="loan">'+fmt(Math.max(P,0))+'</td><td>'+fmt(need)+'</td><td><div class="pbar"><div style="width:'+pct.toFixed(1)+'%"></div><span>'+pct.toFixed(0)+'%</span></div></td><td>'+(free?'✓ التحرر':(k===3?'🔓 تحرر قسط أختي':''))+'</td></tr>';
     if(freedom)break;
   }
   document.querySelector('#schedTable tbody').innerHTML=tb;
