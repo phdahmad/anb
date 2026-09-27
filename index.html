@@ -157,4 +157,9 @@ function calc(){
     res.innerHTML='<span class="red">بهذه المدخلات لا تكتمل التسوية قبل نهاية العقد (أغسطس 2031) — زد الوفورات</span>';
   }
 }
-document.querySelectorAll('.calc input[type=text]').forEach(e=>e.addEventListener('input',function(){const v=toEn(this.value); if(v!==this.value)t
+document.querySelectorAll('.calc input[type=text]').forEach(e=>e.addEventListener('input',function(){const v=toEn(this.value); if(v!==this.value)this.value=v; calc();}));
+document.getElementById('wakala').addEventListener('input',calc);
+calc();
+</script>
+</body>
+</html>
